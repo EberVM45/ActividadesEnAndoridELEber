@@ -41,20 +41,13 @@ public class DAOUsuarios {
 
     }
 
-    public boolean update(Usuario usuario){
-
-        ContentValues cv = new ContentValues();
-
-        cv.put(DB.COLUMS_TABLEUSUARIOS[1], usuario.getNombre());
-        cv.put(DB.COLUMS_TABLEUSUARIOS[2], usuario.getEmail());
-        cv.put(DB.COLUMS_TABLEUSUARIOS[3], usuario.getContraseña());
-        cv.put(DB.COLUMS_TABLEUSUARIOS[4], usuario.getTelefono());
+    public boolean update(ContentValues cv){
 
         return   ad.update(
                 DB.TABLE_USUARIOS_NAME,
                 cv ,
                 "_id=?",
-                new String[]{ String.valueOf( usuario.getID())}
+                new String[]{ String.valueOf( cv.get("_ID"))}
                 )   > 0;
     }
 
