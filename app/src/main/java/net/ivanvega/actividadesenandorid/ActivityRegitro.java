@@ -32,9 +32,7 @@ public class ActivityRegitro extends AppCompatActivity {
         txtPass = (TextView) findViewById(R.id.txtPassword);
         txtEmail = (TextView) findViewById(R.id.txtEmail);
         txtTel = (TextView) findViewById(R.id.txtTel);
-
-        String botonOK = getResources().getString(R.string.registro_modificar);
-
+        String botonOK="Aceptar";
 
 
         btnAgregar = (Button) findViewById(R.id.btnGuardar);
